@@ -81,7 +81,7 @@ Module({
     if (!filtreler) return;
     filtreler.map(
         async (filter) => {
-            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
+            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm','chakara','nammal','penne','uff','valanj');
             if (pattern.test(message.message)) {
                 await message.client.sendMessage(message.jid, {
                     text: filter.dataValues.text
